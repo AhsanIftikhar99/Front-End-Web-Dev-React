@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import Home from './HomeComponent';
 import Menu from './MenuComponent';
 import Contact from './ContactComponent';
-import About from './AboutComponent';
-import DishDetail from './DishdetailComponent';
+import About from './Aboutcomponent';
+import DishDetail from './dishdetailcomponent';
 import Header from './HeaderComponent';
 import Footer from './FooterComponent';
 import { Switch, Route, Redirect, withRouter } from 'react-router-dom';
@@ -66,7 +66,7 @@ class Main extends Component {
                <CSSTransition key={this.props.location.key} classNames="page" timeout={300}>
                   <Switch>
                      <Route path="/home" component={HomePage} />
-                     <Route exact path="/aboutus" component={() => <About leaders={this.props.leaders} />} />
+                     {/* <Route exact path="/aboutus" component={() => <About leaders={this.props.leaders} />} /> */}
                      <Route exact path="/menu" component={() => <Menu dishes={this.props.dishes} />} />
                      <Route path="/menu/:dishId" component={DishWithId} />
                      <Route exact path="/contactus" component={() => <Contact postFeedback={this.props.postFeedback} resetFeedbackForm={this.props.resetFeedbackForm} />} />
